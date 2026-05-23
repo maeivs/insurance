@@ -1,0 +1,606 @@
+.page-shell {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+  background: rgba(244, 249, 255, 0.82);
+  border-bottom: 1px solid rgba(132, 165, 196, 0.2);
+}
+
+.header-inner,
+.section-inner,
+.footer-inner {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 84px;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-badge {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f6bff, #56c5ff);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 16px 36px rgba(15, 107, 255, 0.24);
+}
+
+.brand-copy strong,
+.brand-copy span {
+  display: block;
+}
+
+.brand-copy strong {
+  font-size: 1rem;
+  color: var(--ink-strong);
+}
+
+.brand-copy span {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-nav a {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.header-cta,
+.hero-actions a,
+.consult-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header-cta,
+.consult-button {
+  border: none;
+  background: linear-gradient(135deg, #0f6bff, #2db6ff);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(15, 107, 255, 0.24);
+}
+
+.header-cta {
+  min-height: 48px;
+  padding: 0 22px;
+}
+
+.page-main {
+  flex: 1;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 56px;
+  background:
+    radial-gradient(circle at top left, rgba(112, 201, 255, 0.34), transparent 34%),
+    linear-gradient(180deg, #eff8ff 0%, #ffffff 72%);
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(12px);
+}
+
+.hero-section::before {
+  width: 260px;
+  height: 260px;
+  top: -70px;
+  right: -60px;
+  background: rgba(16, 111, 255, 0.12);
+}
+
+.hero-section::after {
+  width: 160px;
+  height: 160px;
+  bottom: 26px;
+  left: -40px;
+  background: rgba(92, 209, 255, 0.16);
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(15, 107, 255, 0.08);
+  color: #0f6bff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.hero-copy h1 {
+  margin: 20px 0 18px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.hero-copy p {
+  max-width: 56ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-actions .primary-link {
+  min-height: 54px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #0f6bff, #2db6ff);
+  color: #fff;
+}
+
+.hero-actions .secondary-link {
+  min-height: 54px;
+  padding: 0 22px;
+  border: 1px solid rgba(15, 107, 255, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink-strong);
+}
+
+.hero-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.hero-point {
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(132, 165, 196, 0.18);
+  box-shadow: 0 20px 45px rgba(46, 83, 124, 0.08);
+}
+
+.hero-point strong,
+.hero-point span {
+  display: block;
+}
+
+.hero-point strong {
+  margin-bottom: 6px;
+  color: var(--ink-strong);
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-card {
+  position: relative;
+  min-height: 560px;
+  padding: 24px;
+  border-radius: 36px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(7, 43, 102, 0.06), rgba(7, 43, 102, 0.14));
+  box-shadow: 0 32px 70px rgba(18, 46, 84, 0.16);
+}
+
+.hero-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.hero-overlay article {
+  width: 100%;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(5, 28, 66, 0.38), rgba(5, 28, 66, 0.72));
+  color: #eef6ff;
+}
+
+.hero-overlay strong,
+.hero-overlay span {
+  display: block;
+}
+
+.hero-overlay strong {
+  margin-bottom: 10px;
+  font-size: 1.28rem;
+}
+
+.floating-card {
+  position: absolute;
+  right: -16px;
+  bottom: 36px;
+  width: min(230px, 56vw);
+  padding: 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 44px rgba(18, 46, 84, 0.16);
+}
+
+.floating-card strong,
+.floating-card span {
+  display: block;
+}
+
+.floating-card strong {
+  color: var(--ink-strong);
+}
+
+.content-section {
+  padding: 44px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.section-head h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.section-head p {
+  max-width: 48ch;
+}
+
+.benefit-grid,
+.product-grid,
+.footer-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.benefit-grid,
+.product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.benefit-card,
+.product-card,
+.consult-card,
+.showcase-card,
+.contact-card {
+  border: 1px solid rgba(132, 165, 196, 0.16);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 22px 48px rgba(27, 53, 87, 0.08);
+}
+
+.benefit-card,
+.product-card {
+  padding: 28px;
+}
+
+.icon-pill {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(15, 107, 255, 0.12), rgba(45, 182, 255, 0.18));
+  color: #0f6bff;
+  font-size: 1.35rem;
+}
+
+.benefit-card h3,
+.product-card h3,
+.showcase-copy h3,
+.consult-card h2,
+.contact-card strong {
+  margin: 0 0 10px;
+  color: var(--ink-strong);
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.showcase-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.showcase-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 280px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(8, 30, 64, 0.1), rgba(8, 30, 64, 0.7));
+  color: #edf5ff;
+}
+
+.showcase-copy h3,
+.showcase-copy p {
+  max-width: 28ch;
+}
+
+.showcase-aside {
+  padding: 28px;
+  background: linear-gradient(180deg, #f3f9ff, #e4f3ff);
+}
+
+.showcase-aside ul {
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.showcase-aside li {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink-strong);
+}
+
+.consult-section {
+  padding: 44px 0 72px;
+}
+
+.consult-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(125, 213, 255, 0.2), transparent 36%),
+    linear-gradient(180deg, #ffffff, #f4f9ff);
+}
+
+.consult-note {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(15, 107, 255, 0.06);
+}
+
+.consult-note ul {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.consult-note li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.consult-note li::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #0f6bff;
+}
+
+.consult-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+}
+
+.field-group label {
+  color: var(--ink-strong);
+  font-weight: 600;
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 18px;
+  border: 1px solid rgba(132, 165, 196, 0.3);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink-strong);
+  font: inherit;
+}
+
+.field-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  outline: 2px solid rgba(15, 107, 255, 0.18);
+  border-color: #0f6bff;
+}
+
+.consult-button {
+  min-height: 58px;
+  margin-top: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.form-caption {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.site-footer {
+  padding: 28px 0 42px;
+  border-top: 1px solid rgba(132, 165, 196, 0.18);
+  background: linear-gradient(180deg, #f9fcff, #eef6ff);
+}
+
+.footer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.contact-card {
+  padding: 22px;
+}
+
+.contact-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+}
+
+.footer-copy {
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .header-nav {
+    display: none;
+  }
+
+  .hero-grid,
+  .product-showcase,
+  .consult-card {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-grid,
+  .product-grid,
+  .footer-grid,
+  .hero-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-card {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner,
+  .section-inner,
+  .footer-inner {
+    width: min(1120px, calc(100% - 28px));
+  }
+
+  .hero-section {
+    padding-top: 56px;
+  }
+
+  .hero-actions,
+  .section-head {
+    align-items: stretch;
+  }
+
+  .hero-actions a,
+  .header-cta {
+    width: 100%;
+  }
+
+  .benefit-grid,
+  .product-grid,
+  .footer-grid,
+  .hero-points {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    min-height: 360px;
+    padding: 18px;
+    border-radius: 28px;
+  }
+
+  .floating-card {
+    right: 12px;
+    bottom: 14px;
+    width: calc(100% - 24px);
+  }
+
+  .content-section,
+  .consult-section {
+    padding: 30px 0;
+  }
+
+  .consult-card {
+    padding: 20px;
+  }
+}
